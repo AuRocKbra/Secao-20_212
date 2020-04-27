@@ -15,13 +15,8 @@ public class Programa {
 		list.add(new Produto("Notebook",1200.00));
 		list.add(new Produto("Tablet",450.00));
 		
-		Comparator<Produto> comparador =new Comparator<Produto>() {
-
-			@Override
-			public int compare(Produto o1, Produto o2) {
+		Comparator<Produto> comparador =(o1,o2) -> {
 				return o1.getNome().toUpperCase().compareTo(o2.getNome().toUpperCase());
-			}
-			
 		}; 
 		
 		list.sort(comparador);
